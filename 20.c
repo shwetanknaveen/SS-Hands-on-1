@@ -10,7 +10,7 @@ int main(){
        (respectively) the calling process, the process group of the
        calling process, or the real user ID of the calling process.*/
 	printf("Priority of current process = %d\n",prio);
-    nice(12);
+    nice(-20);//use sudo to increase the priority of the process where lower number indicates the higher priority
     printf("Modified  Priority of current process = %d\n",getpriority(PRIO_PROCESS,0));
 	return 0;
 }
