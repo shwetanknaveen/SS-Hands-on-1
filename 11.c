@@ -26,7 +26,7 @@ int main()
 	
 	write(fd1,buff4,5);
 	write(fd3,buff5,5);
-	
+	//int fd3=fcntl(fd,F_DUPFD,0); duplicating using fcntl where third parameter specify that which value should we get as duplicated fd
 	//We can find the details about which fd for this process is pointing to which file. We get pid of process by command-
 	// pidof ./11.out
 	//then ls -l /proc/pid"which was found"/fd
