@@ -6,7 +6,14 @@ int main()
 {
 	int fd=creat("file12.txt",0744);
 	int f=fcntl(fd,F_GETFL);
-	printf("%d",f);
+	f=f&O_ACCMODE;
+	printf("%d\n",f);
+	if(f==0)
+	printf("Read only");
+	else if(f==1)printf("write only");
+	else if(f==2)printf("read write only");
+	else printf("other");
+
 	
 	/*
 	Flag values-
