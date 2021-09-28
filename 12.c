@@ -4,7 +4,8 @@
 #include <stdlib.h> 
 int main()
 {
-	int fd=creat("file12.txt",0744);
+
+	int fd = open("/home/shwetank/Desktop/2021lab/file12.txt",O_WRONLY);
 	int f=fcntl(fd,F_GETFL);
 	f=f&O_ACCMODE;
 	printf("%d\n",f);
